@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bijdrage doen</title>
+    <link rel="stylesheet" type="text/css" href="../css/bijdrage.css">
+    <script type="text/javascript">
+
+    window.onload=function(){
+
+      //geef variable met de link naar de elementen
+      var button = document.querySelector('.login');
+      var loginPanel = document.querySelector('.loginpanel');
+      var closeButton = document.querySelector(".close");
+
+      //functie om de panel te tonen.
+      function toonPanel(){
+          loginPanel.classList.toggle("loginpanel-active");
+      }
+
+      //functie om de functie weg te klikken.
+      function windowOnClick(event) {
+
+          //als er buiten de panel wordt geklikt.
+          if (event.target === loginPanel) {
+              toonPanel();
+          }
+      }
+
+      //wanneer de button wordt aangeklikt, toon login panel.
+      button.addEventListener("click", toonPanel);
+      //wanneer de closebutton wordt aangeklikt, verdwijnt de login panel.
+      closeButton.addEventListener("click", toonPanel);
+      //wanneer er buiten de panel wordt aangeklikt, verdwijnt de panel.
+      window.addEventListener("click", windowOnClick);
+  }
+
+  //functie voor login validatie
+  function validateForm() {
+         var un = document.getElementById('email').value;
+         var pw = document.getElementById('password').value;
+         var username = "17036569@hhs.nl";
+         var password = "password";
+
+         //als un en pw gelijk zijn aan username en password
+         if ((un == "17036569@hhs.nl") && (pw == password)) {
+            //geef true
+             return true;
+         }
+         //anders
+         else {
+             alert ("Aanmelden is niet gelukt, probeer het nog eens.");
+         }
+       }
+    </script>
+  </head>
+  <body>
+    <body>
+      <div class="loginpanel" id="loginpanel">
+          <div class="panelcontent" id="panelcontent">
+            <img src="../images/logo.png" id="hhslogo" alt="logo">
+            <h2 id="logintekst">Aanmelden met uw organisatieaccount</h2>
+            <span class="close" id="close">X</span>
+            <form class="logindata" onSubmit="return validateForm();" action="bijdrage.html" method="post">
+              <input type="email" name="emailadres" placeholder=" gebruikersnaam@hhs.nl" class="forminput" required id="email">
+              <br>
+              <input type="password" name="pwd" maxlength="20" class="forminput" placeholder=" wachtwoord" required id="password">
+              <br>
+              <input type="submit" name="Inloggen" value="Aanmelden" id="submit">
+            </form>
+          </div>
+      </div>
+      <header>
+        <div class="container">
+          <a href="index.html"><img src="../images/logo.png" id="headerhhslogo" alt="logo"></a>
+          <div class="headerbg">
+          </div>
+          <nav>
+            <ul>
+              <li><a href="lab.html">Lab</a></li>
+              <li><a href="nieuws.html">Nieuws</a></li>
+              <li><a href="overons.html">Over ons</a></li>
+            </ul>
+          </nav>
+        </div>
+          <button class="login" id="aanmelden"></button>
+          <form class="search" action="#" method="get">
+            <input type="text" name="search" id="search" placeholder="zoeken...">
+
+          </form>
+      </header>
+      <main>
+        <h1>Bijdrage doen</h1>
+        <ul class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="bijdrage.html">Bijdrage doen</a></li>
+          </ul>
+        <p id="introh1">Wilt u als docent helpen met de voorbereiding en&#47;of organisatie van een evenenment&#63;
+          Op deze pagina wordt alle toekomstige evenementen vertoont zodat u geinformeerd wordt en aan kan melden.</p>
+
+        <section id="art1">
+          <p class="date">5 april 2019</p>
+          <a href="revalidatie.html">Digital future of finance &gt;></a>
+        </section>
+
+        <br>
+
+        <section id="art2">
+          <p class="date">18 april 2019</p>
+          <a href="revalidatie.html">Insights from the Security Council &gt;></a>
+        </section>
+
+        <br>
+
+        <section id="art3">
+          <p class="date"> 21 april 2019</p>
+          <a href="revalidatie.html">Symposium Connecting our Stories &gt;></a>
+        </section>
+         <br>
+
+        <section id="art4">
+          <p class="date">15 mei 2019</p>
+          <a href="revalidatie.html">Lector Jeugdhulp in Transformatie &gt;></a>
+        </section>
+
+        <div class="mainbg">
+        </div>
+
+        <div class="pagnation">
+          <a href="#">&laquo;</a>
+          <a href="#" class="active">1</a>
+          <a href="#">&raquo;</a>
+        </div>
+      </main>
+
+      <footer>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Disclaimer</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+
+        <p id="copyright">&copy; 2016 De Haagse Hogeschool &#45; Alle rechten voorbehouden</p>
+      </footer>
+  </body>
+</html>

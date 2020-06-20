@@ -1,0 +1,500 @@
+@font-face {
+  font-family:'AktivGrotesk';
+  src: url(AktivGrotesk.ttf);
+
+  font-family:'GT Walsheim-Bold';
+  src: url(GTWalsheim.otf);
+}
+
+body {
+  background-color: white;
+  color: #223343;
+  height: 1000px;
+  width: 1200px;
+}
+
+header{
+  font-family: AktivGrotesk, sans-serif;
+   background-color:rgba(158, 167, 0, 1);
+   position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1250px;
+    height: 88px;
+   background-image: url(../images/u0.png);
+   background-repeat: no-repeat;
+}
+
+#search {
+  position: absolute;
+  top: 35px;
+  left: 1035px;
+  width: 100px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  border-radius: 4px;
+  padding: 10px 12px 12px 30px;
+  background-image: url('../images/55369.png');
+  background-size: 18px 18px;
+  background-position: 4px 3px;
+  background-repeat: no-repeat;
+  background-color: rgba(158, 167, 0, 1);
+  color: white;
+  height: 20px;
+  outline:none;
+  box-sizing: border-box;
+  border: 0px solid #ccc;
+
+}
+
+#revmeer {
+  color: #00B5D4;
+}
+
+#revmeer:visited {
+    color: #223343;
+}
+
+#search:focus {
+  width: 10%;
+  background-color: rgba(158, 167, 0, 1);
+}
+
+#search:active {
+  background-color: rgba(158, 167, 0, 1);
+}
+
+#headerhhslogo{
+  position: absolute;
+  left: 0px;
+  top: 15px;
+  width: 210px;
+  height: 63px;
+  padding-left: 6px;
+}
+
+nav {
+  float: left;
+  padding-left: 210px;
+  padding-top: 14px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+}
+
+li a:hover{
+  color: #223343;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 50px;
+  padding-top: 25px;
+}
+
+
+.ceobox {
+  background-image: url(../images/u55.png);
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+  top: 60px;
+  height: 217px;
+  width: 217px;
+  margin: 0px;
+  z-index: 2;
+}
+
+#coe {
+    font-family: GT Walsheim-Bold, sans-serif;
+    text-align: center;
+    width: 217px;
+    position: relative;
+    top: 80px;
+
+}
+
+#reval, #vandaag, #lec {
+  font-family: AktivGrotesk, sans-serif;
+  font-size: 14px;
+  position: relative;
+  left: 300px;
+  top: 50px;
+  color: #223343;
+  width: 400px;
+  margin: 0px;
+}
+.datum {
+  color: rgba(158, 167, 0, 1);
+  font-size: 15px;
+
+}
+#vandaag, #lec {
+  font-family: GT Walsheim-Bold, sans-serif;
+  line-height: 20px;
+}
+
+#vandaag {
+  font-size: 30px;
+  position: absolute;
+  top: 50px;
+
+}
+
+#lec {
+  font-size: 20px;
+  position: absolute;
+  top: 75px;
+}
+
+#reval {
+  position: absolute;
+  top: 110px;
+}
+.vandaagtekst {
+  background-image: url(../images/u6.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -40px;
+  top: 74px;
+  width: 780px;
+  height: 280px;
+  z-index: 1;
+}
+
+#agenda {
+  font-family: GT Walsheim-Bold, sans-serif;
+  position: relative;
+  top: 0px;
+  left: 5px;
+  line-height: 5px;
+  background-image: url(../images/u2.png);
+  background-repeat: no-repeat;
+  width: 461px;
+  height: 30px;
+  padding-left: 80px;
+  padding-top: 50px;
+  z-index: -2;
+}
+
+#agendaitem, #agendaitem1{
+  color: #223343;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 0px;
+  width: 300px;
+}
+
+.datum, #agendaitem, #agendaitem1 {
+  position: relative;
+  top: -40px;
+
+}
+
+#meeragenda {
+  color: #00B5D4;
+  position: relative;
+  top: -55px;
+  font-size: 12px;
+}
+.agenda {
+  position: relative;
+  top: 40px;
+  left: 85px;
+}
+
+.agendacon {
+  font-family: GT Walsheim-Bold, sans-serif;
+  position: relative;
+  top: -200px;
+  left: 696px;
+  line-height: 15px;
+  width: 400px;
+}
+
+
+.kopje {
+  text-align: center;
+  color: white;
+  width: 300px;
+  height: 160px;
+  float: left;
+  padding: 30px;
+  margin: 20px;
+  line-height: 175px;
+  font-size: 32px;
+  font-family: GT Walsheim-Bold, sans-serif;
+  font-weight: bold;
+
+}
+#b1{
+text-align: center;
+float: left;
+position: relative;
+top: 240px;
+left: -1130px;
+    font-family: AktivGrotesk, sans-serif;
+  font-size: 13px;
+}
+
+#b2{
+  text-align: center;
+  float: left;
+  position: relative;
+  top: 224px;
+  left: -960px;
+    font-family: AktivGrotesk, sans-serif;
+    font-size: 13px;
+}
+
+#b3{
+  text-align: center;
+  float: left;
+  position: relative;
+  top: 205px;
+  left: -825px;
+    font-family: AktivGrotesk, sans-serif;
+  font-size: 13px;
+}
+#link1, #link2, #link3 {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px #000000;
+}
+
+#link1:hover {
+  color: #9EA700;
+}
+
+#link2:hover {
+  color: #9EA700;
+}
+
+#link3:hover {
+  color: #9EA700;
+}
+
+#button1 {
+  background-image: url(../images/Button1.jpg);
+}
+
+#button2 {
+  background-image: url(../images/Button2.png);
+}
+
+#button3 {
+  background-image: url(../images/Button3.jpg);
+}
+.knop {
+  position: relative;
+  top: -130px;
+  left: 10px;
+
+}
+.news {
+  background-color: rgba(244, 245, 247, 1);
+  width: 700px;
+  height: 30px;
+  position: absolute;
+  left: 270px;
+  top: 750px;
+}
+
+#news {
+  font-family: GT Walsheim-Bold, sans-serif;
+  text-align: center;
+  position: relative;
+  top: -12px;
+}
+
+.newsart {
+  text-align: center;
+  line-height: 10px;
+  font-family: AktivGrotesk, sans-serif;
+
+}
+
+ a h3 {
+  font-family: GT Walsheim-Bold, sans-serif;
+  color: #223343;
+  text-decoration: none;
+}
+
+.nieuwsdatum {
+  font-family: AktivGrotesk, sans-serif;
+  color: rgba(158, 167, 0, 1);
+}
+
+#meernieuws {
+  padding-left: 280px;
+  color: #00B5D4;
+  font-family: GTWalsheim, serif;
+}
+
+footer{
+  position: relative;
+  top: 250px;
+  left: -750px;
+  padding-bottom: 5px;
+
+  font-size: 10px;
+  font-family: AktivGrotesk, sans-serif;
+}
+
+footer li {
+  list-style: none;
+  display: inline;
+  padding-right: 25px;
+  text-decoration: underline;
+  font-size: 10px;
+}
+
+footer li a {
+  color: #223343;
+  font-family: AktivGrotesk, sans-serif;
+}
+
+footer li a:hover{
+  color: #9EA700;
+}
+
+#copyright {
+  font-family: AktivGrotesk, sans-serif;
+  padding-left: 38px;
+  color: #223343;
+  font-size: 10px;
+}
+
+.loginpanel {
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s opacity 0.5s;
+  z-index: 3;
+}
+
+.loginpanel-active{
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.panelcontent {
+  background-color: #223343;
+  border-radius: 15px;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#hhslogo {
+  width: 210px;
+  height: 63px;
+  position: absolute;
+  top: 198px;
+}
+
+#logintekst {
+    font-family: AktivGrotesk, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    width: 500px;
+
+    position: absolute;
+    top: 270px;
+    left: 410px;
+}
+
+#email {
+  font-family: AktivGrotesk, sans-serif;
+  position: absolute;
+  left: 400px;
+  top: 300px;
+  margin: 7.5px;
+  width: 400px;
+  height: 25px;
+  border: 1px solid #797979;
+}
+
+#password {
+  font-family: AktivGrotesk, sans-serif;
+  position: absolute;
+  left: 400px;
+  top: 344px;
+  margin: 7.5px;
+  width: 400px;
+  height: 25px;
+  border: 1px solid #797979;
+}
+
+#submit {
+  float: right;
+  position: absolute;
+  left: 670px;
+  top: 410px;
+  height: 30px;
+  width: 140px;
+  background-color: #00B5D4;
+  border: none;
+  color: white;
+  outline: none;
+}
+
+#submit:active {
+  background-color: rgba(158, 167, 0, 1);
+}
+
+#aanmelden {
+  background: url("../images/u13.png");
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+  border: none;
+  position: absolute;
+  left: 999px;
+  top: 33px;
+  padding: 0px;
+  cursor: pointer;
+}
+
+#aanmelden:focus {
+  outline: none;
+}
+
+#close {
+  font-family: AktivGrotesk, sans-serif;
+  position: absolute;
+  left: 850px;
+  top: 228px;
+  cursor: pointer;
+}
+
+#search::placeholder {
+  color: white;
+}
+
+input:focus::-webkit-input-placeholder {
+  color:transparent; }
+input:focus:-moz-placeholder {
+  color:transparent; }

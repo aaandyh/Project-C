@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Nieuws</title>
+  <link rel="stylesheet" type="text/css" href="../css/nieuws.css">
+  <script type="text/javascript">
+
+  window.onload=function(){
+
+    //geef variable met de link naar de elementen
+    var button = document.querySelector('.login');
+    var loginPanel = document.querySelector('.loginpanel');
+    var closeButton = document.querySelector(".close");
+
+    //functie om de panel te tonen.
+    function toonPanel(){
+        loginPanel.classList.toggle("loginpanel-active");
+    }
+
+    //functie om de functie weg te klikken.
+    function windowOnClick(event) {
+
+        //als er buiten de panel wordt geklikt.
+        if (event.target === loginPanel) {
+            toonPanel();
+        }
+    }
+
+    //wanneer de button wordt aangeklikt, toon login panel.
+    button.addEventListener("click", toonPanel);
+    //wanneer de closebutton wordt aangeklikt, verdwijnt de login panel.
+    closeButton.addEventListener("click", toonPanel);
+    //wanneer er buiten de panel wordt aangeklikt, verdwijnt de panel.
+    window.addEventListener("click", windowOnClick);
+}
+
+//functie voor login validatie
+function validateForm() {
+       var un = document.getElementById('email').value;
+       var pw = document.getElementById('password').value;
+       var username = "17036569@hhs.nl";
+       var password = "password";
+
+       //als un en pw gelijk zijn aan username en password
+       if ((un == "17036569@hhs.nl") && (pw == password)) {
+          //geef true
+           return true;
+       }
+       //anders
+       else {
+           alert ("Aanmelden is niet gelukt, probeer het nog eens.");
+       }
+     }
+  </script>
+</head>
+<body>
+  <body>
+    <div class="loginpanel" id="loginpanel">
+        <div class="panelcontent" id="panelcontent">
+          <img src="../images/logo.png" id="hhslogo" alt="logo">
+          <h2 id="logintekst">Aanmelden met uw organisatieaccount</h2>
+          <span class="close" id="close">X</span>
+          <form class="logindata" onSubmit="return validateForm();" action="index.html" method="post">
+            <input type="email" name="emailadres" placeholder=" gebruikersnaam@hhs.nl" class="forminput" required id="email">
+            <br>
+            <input type="password" name="pwd" maxlength="20" class="forminput" placeholder=" wachtwoord" required id="password">
+            <br>
+            <input type="submit" name="Inloggen" value="Aanmelden" id="submit">
+          </form>
+        </div>
+    </div>
+    <header>
+      <div class="container">
+        <a href="index.html"><img src="../images/logo.png" id="headerhhslogo" alt="logo"></a>
+        <div class="headerbg">
+        </div>
+        <nav>
+          <ul>
+            <li><a href="lab.html">Lab</a></li>
+            <li><a href="nieuws.html">Nieuws</a></li>
+            <li><a href="overons.html">Over ons</a></li>
+          </ul>
+        </nav>
+      </div>
+        <button class="login" id="aanmelden"></button>
+        <form class="search" action="#" method="get">
+          <input type="text" name="search" id="search" placeholder="zoeken...">
+
+        </form>
+    </header>
+  <main>
+    <h1>Nieuws</h1>
+    <ul class="breadcrumb">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="nieuws.html">Nieuws</a></li>
+      </ul>
+    <figure>
+      <img src="../images/foto1.jpg" id="headerfoto" width="740px" height="237px">
+    </figure>
+    <br>
+    <div class="nieuws">
+      <figure>
+        <img src="../images/nieuwsfoto1.jpg" width="160px" height="160px" class="nieuwsfoto" id="nieuwsfoto1">
+      </figure>
+    </div>
+
+      <article class="art1">
+        <a href="#">
+      <h3>In het oog van een mediastorm</h3>
+    </a>
+      <p class="publishdate" id="pb1">27 maart 2019</p>
+
+      <p id="nieuwsintro1">Shashi Roopram maakte filmpje van demonstrant die Baudet bedreigde.</p>
+      <a href="#" class="readmore">Lees meer...</a>
+
+    </article>
+    <br>
+
+    <div class="Nieuws">
+      <figure>
+        <img src="../images/nieuwsfoto2.jpg" width="160px" height="160px" class="nieuwsfoto" id="nieuwsfoto2">
+      </figure>
+    </div>
+
+<hr id="hr1">
+      <article class="art2">
+      <a href="#">
+      <h3>Sustainable development goals kapstok voor wereldburgerschap </h3> </a>
+      <p class="publishdate" id="pb2">26 maart 2019</p>
+
+      <p id="nieuwsintro2">Twee docenten vertellen hoe ze SDG’s gebruiken in hun lessen.</p>
+      <a href="#" class="readmore">Lees meer...</a>
+    </a>
+    </article>
+<hr id="hr2">
+
+    <div class="Nieuws">
+      <figure>
+        <img src="../images/nieuwsfoto3.jpg" width="160px" height="160px" class="nieuwsfoto" id="nieuwsfoto3">
+      </figure>
+    </div>
+
+      <article class="art3">
+        <a href="#">
+      <h3>Cooking around the world&#58; Josephines pilau</h3>
+    </a>
+      <p class="publishdate" id="pb3">21 maart 2019</p>
+      <p id="nieuwsintro3">In deze serie deelt een aantal oud&#45;studenten hun favoriete gerecht met ons.</p>
+      <a href="#" class="readmore">Lees meer...</a>
+    </article>
+
+    <div class="pagination">
+  <a href="#" class="active">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  </div>
+
+    <div class="mainbg">
+    </div>
+  </main>
+  <footer>
+    <ul>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Disclaimer</a></li>
+      <li><a href="#">Sitemap</a></li>
+    </ul>
+    <p id="copyright">&copy; 2016 De Haagse Hogeschool &#45; Alle rechten voorbehouden</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Center of Expertise</title>
+  <link rel="stylesheet" type="text/css" href="../css/home.css">
+  <script type="text/javascript">
+
+
+  window.onload=function(){
+
+    //geef variable met de link naar de elementen
+    var button = document.querySelector('.login');
+    var loginPanel = document.querySelector('.loginpanel');
+    var closeButton = document.querySelector(".close");
+
+    //functie om de panel te tonen.
+    function toonPanel(){
+        loginPanel.classList.toggle("loginpanel-active");
+    }
+
+    //functie om de functie weg te klikken.
+    function windowOnClick(event) {
+
+        //als er buiten de panel wordt geklikt.
+        if (event.target === loginPanel) {
+            toonPanel();
+        }
+    }
+
+    //wanneer de button wordt aangeklikt, toon login panel.
+    button.addEventListener("click", toonPanel);
+    //wanneer de closebutton wordt aangeklikt, verdwijnt de login panel.
+    closeButton.addEventListener("click", toonPanel);
+    //wanneer er buiten de panel wordt aangeklikt, verdwijnt de panel.
+    window.addEventListener("click", windowOnClick);
+}
+
+//functie voor login validatie
+function validateForm() {
+       var un = document.getElementById('email').value;
+       var pw = document.getElementById('password').value;
+       var username = "17036569@hhs.nl";
+       var password = "password";
+
+       //als un en pw gelijk zijn aan username en password
+       if ((un == "17036569@hhs.nl") && (pw == password)) {
+          //geef true
+           return true;
+       }
+       //anders
+       else {
+           alert ("Aanmelden is niet gelukt, probeer het nog eens.");
+       }
+     }
+  </script>
+</head>
+<body>
+  <div class="loginpanel" id="loginpanel">
+      <div class="panelcontent" id="panelcontent">
+        <img src="../images/logo.png" id="hhslogo" alt="logo">
+        <h2 id="logintekst">Aanmelden met uw organisatieaccount</h2>
+        <span class="close" id="close">X</span>
+        <form class="logindata" onSubmit="return validateForm();" action="index.html" method="post">
+          <input type="email" name="emailadres" placeholder=" gebruikersnaam@hhs.nl" class="forminput" required id="email">
+          <br>
+          <input type="password" name="pwd" maxlength="20" class="forminput" placeholder=" wachtwoord" required id="password">
+          <br>
+          <input type="submit" name="Inloggen" value="Aanmelden" id="submit">
+        </form>
+      </div>
+  </div>
+  <header>
+    <div class="container">
+      <a href="home.html"><img src="../images/logo.png" id="headerhhslogo" alt="logo"></a>
+      <nav>
+        <ul>
+          <li><a href="lab.html">Lab</a></li>
+          <li><a href="nieuws.html">Nieuws</a></li>
+          <li><a href="overons.html">Over ons</a></li>
+        </ul>
+      </nav>
+    </div>
+      <button class="login" id="aanmelden"></button>
+      <form class="search" action="#" method="get">
+        <input type="text" name="search" id="search" placeholder="zoeken...">
+
+      </form>
+  </header>
+  <br>
+  <main>
+    <div class="ceobox">
+      <h1 id="coe">CENTER OF EXPERTISE</h1>
+    </div>
+    <div class="vandaag">
+      <div class="vandaagtekst">
+        <h1 id="vandaag">Vandaag</h1>
+        <h2 id="lec">Lectoraat - Revalidatie</h2>
+        <p id="reval">Het lectoraat richt zich op alle revalidatiedoelgroepen, <br>maar bij het deelgebied ‘participatie’ <br>ligt de focus op kinderen en jongeren met <br>niet-aangeboren hersenletsel (NAH).
+          Zij worden zelf ook nadrukkelijk betrokken bij het bedenken en uitvoeren van activiteiten. <a href="revalidatie.html" id="revmeer">Meer...</a></p>
+      </div>
+    </div>
+
+    <div class="agendacon">
+        <h1 id="agenda">Agenda</h1>
+        <div class="agenda">
+
+        <h2 class="datum">04 januari 2019</h2>
+        <a href="revalidatie.html" id="agendaitem"><h2>Lectoraat &#45; Technologie for Health &gt;</h2></a>
+        <h2 class="datum">13 december 2018</h2>
+        <a href="revalidatie.html" id="agendaitem1"><h2>Open dag &gt;</h2></a>
+        <br>
+        <a href="agenda.html" id="meeragenda">Meer...</a>
+      </div>
+    </div>
+
+    <div class="knop">
+      <p class="kopje" id="button1"><a href="BIJDRAGEDOEN.HTML" id="link1">BIJDRAGE DOEN</a></p>
+      <p class="kopje" id="button2"><a href="agenda.html" id="link2">EVENEMENTEN</a></p>
+      <p class="kopje" id="button3"><a href="LAB.html" id="link3">TESTING LAB</a></p>
+    </div>
+
+    <p class="beschrijving" id="b1">Draag als docent bij aan evenementen <br>georganiseerd door de Center of Expertise.</p>
+  <br>
+    <p class="beschrijving" id="b2">Vindt hier alle geplande evenementen.</p>
+    <br>
+    <p class="beschrijving" id="b3">Wordt als student of docent <br> uitgedaagd door projecten en inspirerende resultaten.</p>
+
+      <div class="news">
+        <a href="nieuws.html"><h3 id="news">nieuws</h3></a>
+
+      <div class="newsart">
+    <p class="nieuwsdatum">27 maart 2019</p>
+    <a href="#"><h3>In het oog van een mediastorm &gt;</h3></a>
+      </div>
+
+      <div class="newsart">
+    <p class="nieuwsdatum">26 maart 2019</p>
+    <a href="#"><h3>Sustainable development goals kapstok voor wereldburgerschap &gt;</h3></a>
+      </div>
+
+      <div class="newsart">
+    <p class="nieuwsdatum">27 maart 2019</p>
+    <a href="#"><h3>Cooking around the world&#58; Josephines pilau &gt;</h3></a>
+      </div>
+
+    <a href="nieuws.html" id="meernieuws">Bekijk al ons nieuws</a>
+
+
+    </div>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Disclaimer</a></li>
+      <li><a href="#">Sitemap</a></li>
+    </ul>
+
+    <p id="copyright">&copy; 2016 De Haagse Hogeschool &#45; Alle rechten voorbehouden</p>
+  </footer>
+
+</body>
+</html>

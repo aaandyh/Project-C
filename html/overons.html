@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Over ons</title>
+    <link rel="stylesheet" type="text/css" href="../css/overons.css">
+    <script type="text/javascript">
+
+    window.onload=function(){
+
+      //geef variable met de link naar de elementen
+      var button = document.querySelector('.login');
+      var loginPanel = document.querySelector('.loginpanel');
+      var closeButton = document.querySelector(".close");
+
+      //functie om de panel te tonen.
+      function toonPanel(){
+          loginPanel.classList.toggle("loginpanel-active");
+      }
+
+      //functie om de functie weg te klikken.
+      function windowOnClick(event) {
+
+          //als er buiten de panel wordt geklikt.
+          if (event.target === loginPanel) {
+              toonPanel();
+          }
+      }
+
+      //wanneer de button wordt aangeklikt, toon login panel.
+      button.addEventListener("click", toonPanel);
+      //wanneer de closebutton wordt aangeklikt, verdwijnt de login panel.
+      closeButton.addEventListener("click", toonPanel);
+      //wanneer er buiten de panel wordt aangeklikt, verdwijnt de panel.
+      window.addEventListener("click", windowOnClick);
+  }
+
+  //functie voor login validatie
+  function validateForm() {
+         var un = document.getElementById('email').value;
+         var pw = document.getElementById('password').value;
+         var username = "17036569@hhs.nl";
+         var password = "password";
+
+         //als un en pw gelijk zijn aan username en password
+         if ((un == "17036569@hhs.nl") && (pw == password)) {
+            //geef true
+             return true;
+         }
+         //anders
+         else {
+             alert ("Aanmelden is niet gelukt, probeer het nog eens.");
+         }
+       }
+    </script>
+  </head>
+  <body>
+    <body>
+      <div class="loginpanel" id="loginpanel">
+          <div class="panelcontent" id="panelcontent">
+            <img src="../images/logo.png" id="hhslogo" alt="logo">
+            <h2 id="logintekst">Aanmelden met uw organisatieaccount</h2>
+            <span class="close" id="close">X</span>
+            <form class="logindata" onSubmit="return validateForm();" action="overons.html" method="post">
+              <input type="email" name="emailadres" placeholder=" gebruikersnaam@hhs.nl" class="forminput" required id="email">
+              <br>
+              <input type="password" name="pwd" maxlength="20" class="forminput" placeholder=" wachtwoord" required id="password">
+              <br>
+              <input type="submit" name="Inloggen" value="Aanmelden" id="submit">
+            </form>
+          </div>
+      </div>
+      <header>
+        <div class="container">
+          <a href="index.html"><img src="../images/logo.png" id="headerhhslogo" alt="logo"></a>
+          <div class="headerbg">
+          </div>
+          <nav>
+            <ul>
+              <li><a href="lab.html">Lab</a></li>
+              <li><a href="nieuws.html">Nieuws</a></li>
+              <li><a href="overons.html">Over ons</a></li>
+            </ul>
+          </nav>
+        </div>
+          <button class="login" id="aanmelden"></button>
+          <form class="search" action="#" method="get">
+            <input type="text" name="search" id="search" placeholder="zoeken...">
+
+          </form>
+      </header>
+    <main>
+      <h2>Over ons</h2>
+
+      <div id="introtekst">
+        <h3>Center of Expertise</h3>
+        <ul class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="overons.html">Over ons</a></li>
+          </ul>
+        <figure>
+          <p>Naast onderwijs is onderzoek een belangrijke activiteit binnen De Haagse Hogeschool.
+            Studenten doen onderzoek in het kader van hun studie&#44; maar ook een deel van de docenten
+            doet onderzoek, vaak binnen een kenniskring van een lectoraat. Een kenniskring is een
+            onderzoeksgroep die bestaat uit meerdere docent-onderzoekers die rondom een bepaald
+            thema onderzoek doen. Een lector stuurt dit praktijkgerichte onderzoek aan.</p>
+            <br>
+            <p>Binnen het onderzoeksthema &apos;Kwaliteit van Leven: Mens en Technologie&apos;
+              werken vier faculteiten en meerdere lectoren samen aan een centrale onderzoeksvraag&#58;
+              hoe kunnen we de kwaliteit van leven van mensen bevorderen door mens&#44; omgeving en technologie te verbinden&#63;</p>
+            <p>Het onderzoek richt zich op twee thema&apos;s&#58;</p>
+        </div>
+
+        <div id="vitaliteit">
+            <h4>1. Vitaliteit</h4>
+            <p>Dit onderzoeksprogramma is gericht op het bevorderen van een gezonde leefstijl en de vitaliteit van burgers in de Delta regio.
+              Innovatie en technologie spelen een belangrijke rol binnen het onderzoekprogramma.</p>
+        </div>
+
+        <div id="zorg">
+              <h4>2. Zorg &amp; Revalidatie</h4>
+              <p>Dit onderzoeksprogramma is gericht op het zo goed mogelijk ondersteunen van mensen met een zorgbehoefte&#44; uitgaande van menselijke waarden en sociaal-technologische innovaties.
+                Doel is om de kwaliteit van leven te waarborgen met een zo hoog mogelijke sociaal-maatschappelijke participatie.</p>
+              <br>
+              <p>Ben je benieuwd hoe ons onderzoek naar Kwaliteit van Leven er in de praktijk uit ziet&#63;
+                Bekijk het filmpje over ons onderzoeksproject naar de multiBALL beweegmuur&#44;
+                een interactieve muur met een groot touchscreen waarmee kinderen en andere doelgroepen hun beweegvaardigheden kunnen verbeteren.</p>
+              </div>
+                <figure>
+                <img src="../images/overons1.jpg" id="foto" width="442px" height="249px">
+              </figure>
+
+        <div id="cetexp">
+              <p>Binnen het Centre of Expertise staan de volgende onderzoeksvragen centraal&#58;</p>
+              <quote id="quote">&#34;Hoe kunnen we de kwaliteit van leven van mensen bevorderen door mens, omgeving en technologie te verbinden&#63;
+                Wat dragen we bij op individueel niveau &#40;de mens&#41;&#44;
+                zijn omgeving &#40;netwerken&#41;&#44; op systeemniveau &#40;transformatie&#41; en aan de samenleving&#34;</quote>
+                <br>
+                <p>Het draait om de relatie en interactie tussen mens&#44; gezondheid en technologie. De technologie moet in dienst staan van de patiënt en
+                  intermenselijk contact bevorderen om daadwerkelijk tot een hogere kwaliteit van leven te komen.Daarnaast is participatie belangrijk&#59; er wordt niet alleen voor mensen uit de doelgroep ontworpen&#44;
+                  maar mensen uit de doelgroep worden in het hele ontwerpproces actief betrokken en hebben daarmee invloed op hoe technologie hun leven kan verrijken.</p>
+        </div>
+        <div class="mainbg">
+        </div>
+
+    </main>
+
+    <footer>
+      <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Disclaimer</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+      <p id="copyright">&copy; 2016 De Haagse Hogeschool &#45; Alle rechten voorbehouden</p>
+    </footer>
+  </body>
+</html>

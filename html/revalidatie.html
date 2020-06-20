@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Revalidatie</title>
+  <link rel="stylesheet" type="text/css" href="../css/rev.css">
+  <script type="text/javascript">
+
+
+  window.onload=function(){
+
+    //geef variable met de link naar de elementen
+    var button = document.querySelector('.login');
+    var loginPanel = document.querySelector('.loginpanel');
+    var closeButton = document.querySelector(".close");
+
+    //functie om de panel te tonen.
+    function toonPanel(){
+        loginPanel.classList.toggle("loginpanel-active");
+    }
+
+    //functie om de functie weg te klikken.
+    function windowOnClick(event) {
+
+        //als er buiten de panel wordt geklikt.
+        if (event.target === loginPanel) {
+            toonPanel();
+        }
+    }
+
+    //wanneer de button wordt aangeklikt, toon login panel.
+    button.addEventListener("click", toonPanel);
+    //wanneer de closebutton wordt aangeklikt, verdwijnt de login panel.
+    closeButton.addEventListener("click", toonPanel);
+    //wanneer er buiten de panel wordt aangeklikt, verdwijnt de panel.
+    window.addEventListener("click", windowOnClick);
+}
+
+//functie voor login validatie
+function validateForm() {
+       var un = document.getElementById('email').value;
+       var pw = document.getElementById('password').value;
+       var username = "17036569@hhs.nl";
+       var password = "password";
+
+       //als un en pw gelijk zijn aan username en password
+       if ((un == "17036569@hhs.nl") && (pw == password)) {
+          //geef true
+           return true;
+       }
+       //anders
+       else {
+           alert ("Aanmelden is niet gelukt, probeer het nog eens.");
+       }
+     }
+  </script>
+</head>
+<body>
+  <div class="loginpanel" id="loginpanel">
+      <div class="panelcontent" id="panelcontent">
+        <img src="../images/logo.png" id="hhslogo" alt="logo">
+        <h2 id="logintekst">Aanmelden met uw organisatieaccount</h2>
+        <span class="close" id="close">X</span>
+        <form class="logindata" onSubmit="return validateForm();" action="index.html" method="post">
+          <input type="email" name="emailadres" placeholder=" gebruikersnaam@hhs.nl" class="forminput" required id="email">
+          <br>
+          <input type="password" name="pwd" maxlength="20" class="forminput" placeholder=" wachtwoord" required id="password">
+          <br>
+          <input type="submit" name="Inloggen" value="Aanmelden" id="submit">
+        </form>
+      </div>
+  </div>
+  <header>
+    <div class="container">
+      <a href="index.html"><img src="../images/logo.png" id="headerhhslogo" alt="logo"></a>
+      <div class="headerbg">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="lab.html">Lab</a></li>
+          <li><a href="nieuws.html">Nieuws</a></li>
+          <li><a href="overons.html">Over ons</a></li>
+        </ul>
+      </nav>
+    </div>
+      <button class="login" id="aanmelden"></button>
+      <form class="search" action="#" method="get">
+        <input type="text" name="search" id="search" placeholder="zoeken...">
+
+      </form>
+  </header>
+
+    <main>
+      <h1 id="rev">Revalidatie</h1>
+      <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="revalidatie.html">Revalidatie</a></li>
+        </ul>
+      <div class="intro">
+      <p id="lectext">Het lectoraat Revalidatie is gericht op het bevorderen van participatie en kwaliteit van leven van mensen met een lichamelijke beperking of chronische aandoening.
+        Het lectoraat is gestart in samenwerking met Sophia Revalidatie. Het doet onderzoek en start innovatieve projecten op het gebied van participatie en kwaliteit van leven.
+        Participatie&#44; &#40;aangepast&#41; bewegen en sporten en e-revalidatie zijn hierbij drie belangrijke&#44; samenhangende onderzoekslijnen.</p>
+      </div>
+
+        <div class="blocktitel"
+        <p id="titledate">04 januari 2019</p>
+        <p id="titlelec">Lectoraat &#45; Revalidatie</p>
+        <p id="amount">30/50 vol</p>
+      </div>
+        <br>
+
+        <div class="tekst">
+          <p>In principe richt het lectoraat zich op alle revalidatiedoelgroepen&#44; maar bij het deelgebied &#39;participatie&#39; ligt de focus op kinderen en jongeren met niet-aangeboren hersenletsel &#40;NAH&#41;.
+          Zij worden zelf ook nadrukkelijk betrokken bij het bedenken en uitvoeren van activiteiten</p>
+          <p>Het lectoraat wil met onderzoek&#44; innovatie en kenniscirculatie bijdragen aan gerichte verbeteringen en veranderingen in het zorgaanbod en beroepsopleidingen.
+          Het brengt revalidatie onder de aandacht van hbo&#45;studenten en is uitgegroeid tot een regionaal kennis&#45; en expertisecentrum met landelijke en internationale partners.</p>
+        </div>
+        <button type="button" id="aanmeld">aanmelden voor evenement</button>
+        <button type="button" id="bijknop">bijdrage doen?</button>
+
+
+        <div class="lecbox">
+        </div>
+        <section class="lecdata">
+            <div class="data">
+          <p>Datum&#58; <br> 04 januari 2019</p>
+          <p>Locatie&#58; <br> Vestiging Poseidon&#44; <br> Den Haag</p>
+          <p>Tijd&#58;<br> 14&#58;00&#45;16&#58;00</p>
+            </div>
+        </section>
+
+          <section>
+            <figure>
+              <img src="../images/u126.png" alt="Arend de Kloet" id="Arend">
+            </figure>
+              <div class="contact">
+            <p id="contactid">Contact</p>
+            <p id="contextid">Lector Revalidatie <a href="0704457416" id="phonenumber">070 445 74 16</a></p>
+            <p id="name">dr. Arend de Kloet <a href="mailto:a.j.dekloet@hhs.nl" target="_top" id="email1">a.j.dekloet@hhs.nl</a></p>
+              </div>
+          </section>
+
+          <div class="mainbg">
+          </div>
+    </main>
+    <footer>
+      <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Disclaimer</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+
+      <p id="copyright">&copy; 2016 De Haagse Hogeschool &#45; Alle rechten voorbehouden</p>
+    </footer>
+  </body>
+</html>
